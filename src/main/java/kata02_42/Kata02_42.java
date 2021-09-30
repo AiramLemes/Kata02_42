@@ -9,24 +9,20 @@ import java.util.Map;
 public class Kata02_42 {
     
     public static void main(String[] args) {
-    
+      
         int[] data = {1, 3, 3, 4, 5, 6, 7, 9, 9, 10, 11, 11, 14, 14, 14};
 
-        HashMap<Integer, Integer> histogram = new HashMap<Integer, Integer>();
-
         
+        Histogram histo = new Histogram(data);
+       
         
-        for (int key : data) {
-            histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
-        }
-        
-        
+        HashMap<Integer, Integer> histogr = histo.getHistogram();
         
 
         
-        for (Integer key : histogram.keySet()) {
+        for (Integer key : histogr.keySet()) {
             
-            System.out.println(key + " ==> " + histogram.get(key));
+            System.out.println(key + " ==> " + histogr.get(key));
         
         }
     
