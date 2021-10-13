@@ -10,17 +10,17 @@ public class Kata02_42 {
     
     public static void main(String[] args) {
       
-        Integer[] data = {1, 3, 3, 4, 5, 6, 7, 9, 9, 10, 11, 11, 14, 14, 14};
+        String[] data = {"Rosa", "Pepe", "María", "Pepe", "Pepe", "Rosa"};
 
         
         Histogram histo = new Histogram(data);
        
         
-        HashMap<Integer, Integer> histogr = histo.getHistogram();
+        Map<String, Integer> histogr = histo.getHistogram();
         
 
         
-        for (Integer key : histogr.keySet()) {
+        for (String key : histogr.keySet()) {
             
             System.out.println(key + " ==> " + histogr.get(key));
         

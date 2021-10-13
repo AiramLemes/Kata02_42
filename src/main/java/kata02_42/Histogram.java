@@ -2,6 +2,7 @@
 package kata02_42;
 
 import java.util.HashMap;
+import java.util.Map;
 
 
 public class Histogram<T> {
@@ -26,11 +27,11 @@ public class Histogram<T> {
     
     
     
-    public HashMap<Integer, Integer> getHistogram() {
-        HashMap<Integer, Integer> histogram = new HashMap<Integer, Integer>();
+    public Map<T, Integer> getHistogram() {
+        Map<T, Integer> histogram = new HashMap<T, Integer>();
         
         for (T key : data) {
-            histogram.put((Integer)key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
+            histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
         }
          
         return histogram;
